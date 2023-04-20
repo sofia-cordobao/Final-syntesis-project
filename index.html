@@ -55,6 +55,13 @@
       >
         Analysis 3
       </button>
+      <button
+        class="tablinks"
+        onclick="openTab(event, 'tab5')"
+        id="tab5-button"
+      >
+        Analysis 4
+      </button>
     </div>
 
     <!-- Tab content -->
@@ -62,9 +69,10 @@
     <div id="tab2" class="tabcontent"></div>
     <div id="tab3" class="tabcontent"></div>
     <div id="tab4" class="tabcontent"></div>
+    <div id="tab5" class="tabcontent"></div>
 
     <script>
-      const texts = ["tab1", "tab2", "tab3", "tab4"];
+      const texts = ["tab1", "tab2", "tab3", "tab4", "tab5"];
       for (let i = 0; i < texts.length; i++) {
         $("#" + texts[i] + "-button").click(function () {
           $("#" + texts[i]).load("html/" + texts[i] + ".html");

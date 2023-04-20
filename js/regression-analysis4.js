@@ -39,12 +39,12 @@ function linearRegression(values_x, values_y) {
 
 //For kWh vs Month
 const months = [1, 2, 3, 4, 5];
-const kwhs = [105, 115, 121, 120, 123];
+const kwhs = [3, 11, 72, 96, 92];
 var l = linearRegression(months, kwhs);
 
 //For Residents vs kWh
-const residents = [3, 4, 4, 8, 4, 3, 3, 4, 4, 4];
-const kWhs = [218, 220, 128, 728, 183, 115, 142, 116, 218, 159];
+const residents = [4, 3, 4, 3, 3, 5, 3, 3, 3, 3];
+const kWhs = [159, 218, 220, 115, 104, 260, 122, 120, 144, 134];
 var r = linearRegression(residents, kWhs);
 
 const trace11 = {
@@ -113,8 +113,8 @@ const layout2 = {
 var data1 = [trace21, trace11];
 var data2 = [trace22, trace12];
 
-Plotly.newPlot("analysis1Plot1", data1, layout1);
-Plotly.newPlot("analysis1Plot2", data2, layout2);
+Plotly.newPlot("analysis4Plot1", data1, layout1);
+Plotly.newPlot("analysis4Plot2", data2, layout2);
 
 var m1 = parseFloat(l[0]).toFixed(2);
 var b1 = parseFloat(l[1]).toFixed(2);
@@ -122,8 +122,8 @@ var m2 = parseFloat(r[0]).toFixed(2);
 var b2 = parseFloat(r[1]).toFixed(2);
 
 document.getElementById(
-  "analysis1Eqn1"
+  "analysis4Eqn1"
 ).innerHTML = `The regression equation is given by $y=${m1}x+${b1}.$`;
 document.getElementById(
-  "analysis1Eqn2"
+  "analysis4Eqn2"
 ).innerHTML = `The regression equation is given by $y=${m2}x+${b2}.$`;
